@@ -34,4 +34,8 @@ steps:
     publishWebProjects: true  # Set this to true if your project is a web application
     arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
     zipAfterPublish: false
-
+- task: PublishBuildArtifacts@1 # this is for publishing the build to relasepipeline
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'buildarifacts' #this is folder name we can change
+    publishLocation: 'Container'
