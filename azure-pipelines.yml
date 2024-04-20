@@ -47,4 +47,3 @@ steps:
     Destination: 'AzureBlob'
     storage: 'azurestorage1005'
     ContainerName: 'vmpassword'
-    
