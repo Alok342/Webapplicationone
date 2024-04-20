@@ -43,7 +43,8 @@ steps:
 - task: AzureFileCopy@6
   inputs:
     SourcePath: '*'
-    azureSubscription: 'myservicxesconnection'
+    azureSubscription: 'Pay-As-You-Go(a0b8f2fc-e3f6-447e-8793-0219cb84f1bc)'
     Destination: 'AzureBlob'
     storage: 'azurestorage1005'
     ContainerName: 'vmpassword'
+
