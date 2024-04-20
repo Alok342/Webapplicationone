@@ -47,11 +47,4 @@ steps:
     Destination: 'AzureBlob'
     storage: 'azurestorage1005'
     ContainerName: 'vmpassword'
-    BlobPrefix: '/'
-- task: AzureFileCopy@6
-  inputs:
-    SourcePath: '*'
-    azureSubscription: 'myservicxesconnection'
-    Destination: 'AzureBlob'
-    storage: 'azurestorage1005'
-    ContainerName: 'vmpassword'
+    
