@@ -48,4 +48,3 @@ steps:
     Destination: 'AzureBlob'
     storage: 'mystaorage342123'
     ContainerName: 'folder'
-    BlobPrefix: 'myprefix'
