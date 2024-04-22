@@ -40,12 +40,21 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'buildarifacts' #this is folder name we can change
     publishLocation: 'Container'
-- task: AzureFileCopy@4  # Use version 4 of AzureFileCopy task
-  inputs:
-    SourcePath: '$(Build.ArtifactStagingDirectory)'  # Use the build artifacts directory as the source path
-    azureSubscription: 'myservicxesconnection'
-    Destination: 'AzureBlob'
-    storage: 'azurestorage1005'
-    ContainerName: 'vmpassword'
-    BlobPrefix: '' 
 
+
+- task: AzureFileCopy@6
+  inputs:
+    SourcePath: 'Build.ArtifactStagingDirectory'
+    azureSubscription: 'Pay-As-You-Go(a0b8f2fc-e3f6-447e-8793-0219cb84f1bc)'
+    Destination: 'AzureBlob'
+    storage: 'mystaorage342123'
+    ContainerName: 'folder'
+    BlobPrefix: 'myprefix'
+- task: AzureFileCopy@6
+  inputs:
+    SourcePath: 'Build.ArtifactStagingDirectory'
+    azureSubscription: 'myservice'
+    Destination: 'AzureBlob'
+    storage: 'mystaorage342123'
+    ContainerName: 'folder'
+    BlobPrefix: 'myprefix'
