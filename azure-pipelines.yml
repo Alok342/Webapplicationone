@@ -44,7 +44,8 @@ steps:
 - task: AzureFileCopy@6
   inputs:
     SourcePath: '$(Build.ArtifactStagingDirectory)/*'
-    azureSubscription: 'services1'
+    azureSubscription: 'myrg12'
     Destination: 'AzureBlob'
     storage: 'mystaorage342123'
     ContainerName: 'folder'
+    BlobPrefix: 'https://mystaorage342123.blob.core.windows.net/folder'
