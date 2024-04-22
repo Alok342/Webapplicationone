@@ -41,9 +41,10 @@ steps:
     ArtifactName: 'buildarifacts' #this is folder name we can change
     publishLocation: 'Container'
 
+
 - task: AzureFileCopy@6
   inputs:
-    SourcePath: '$(Build.ArtifactStagingDirectory)/*'
+    SourcePath: '$(Build.ArtifactStagingDirectory)/'
     azureSubscription: 'myrg12'
     Destination: 'AzureBlob'
     storage: 'mystaorage342123'
