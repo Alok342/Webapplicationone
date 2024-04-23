@@ -41,11 +41,12 @@ steps:
     ArtifactName: 'buildarifacts' #this is folder name we can change
     publishLocation: 'Container'
 
+
 - task: AzureFileCopy@6
   inputs:
     SourcePath: '$(Build.ArtifactStagingDirectory)/'
-    azureSubscription: 'mysecondserviceconnection'
+    azureSubscription: 'myservicesconnection'
     Destination: 'AzureBlob'
-    storage: 'mystaorage342123'
+    storage: 'storageaccount453276'
     ContainerName: 'folder'
-    BlobPrefix: 'https://mystaorage342123.blob.core.windows.net/folder'
+    BlobPrefix: 'https://storageaccount453276.blob.core.windows.net/folder'
